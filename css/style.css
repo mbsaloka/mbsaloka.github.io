@@ -10,7 +10,7 @@ body {
 
 .hero {
   padding-top: 30vh;
-  min-height: 100vh;
+  min-height: 100vmin;
 }
 
 .hero h1 {
@@ -62,9 +62,10 @@ body {
   opacity: 1;
 }
 
-/* .about {
-  background-color: #232428;
-} */
+.about {
+  /* background-color: #232428; */
+  min-height: 600px;
+}
 
 .about p {
   text-align: justify;
