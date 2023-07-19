@@ -4,6 +4,23 @@ body {
   font-family: "Lexend", sans-serif;
   /* font-family: "Urbanist", sans-serif; */
   color: #f6f6f6;
+
+  min-height: 2000px;
+}
+
+.hero {
+  padding-top: 30vh;
+  min-height: 100vh;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  text-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+  font-weight: 200;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn {
@@ -37,24 +54,51 @@ body {
   transform: scale(1.01);
 
   z-index: -1;
-  transition: opacity 0.3s linear;
   opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
 .btn:hover::before {
   opacity: 1;
 }
 
-.hero h1 {
-  font-size: 4rem;
-  text-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+/* .about {
+  background-color: #232428;
+} */
+
+.about p {
+  text-align: justify;
+  font-weight: 300;
 }
 
-.hero p {
-  font-weight: 200;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.about .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 300px;
 }
 
-.hero {
-  margin-top: 8rem;
+.about .card {
+  position: relative;
+  left: 0;
+  width: 80px;
+  border-radius: 2rem;
+  height: 360px;
+  overflow: hidden;
+  background-color: #1c1b1f;
+  transition: 0.4s ease-in-out;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+  flex: 0.2;
+}
+
+.about img {
+  height: 360px;
+}
+
+.about .card:hover {
+  flex: 2;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 1rem;
+  box-shadow: 0 5px 8px rgb(0, 0, 0, 0.5);
 }
