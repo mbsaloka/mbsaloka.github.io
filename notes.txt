@@ -1,0 +1,52 @@
+Daftar Isi
+1. Navbar
+2. Hero
+3. About
+4. Education
+5. Project / Interest
+6. Contact
+7. Footer
+
+Harus belajar:
+1. Bootstrap 5
+2. Landing element
+3. Parallax effect
+4. Color palette
+5. Font
+6. Responsive
+7. Carousels
+8. Card Animation
+9. Typewriter effect
+
+Isi Content
+1. Navbar
+ -> Logo Web, link page
+
+2. Hero
+-> Nama 'Buyung Saloka', deskripsi singkat, button 'about', foto diri
+
+3. About
+-> Judul 'About', nama 'mbsaloka', gallery, deskripsi
+
+4. Education {SMP, SMA, Kuliah} 
+-> card, judul, image, desc
+
+5. Interest {CP, website, robotik}
+-> icon item, desc box
+
+6. Contact {github, email, instagram, whatsapp}
+-> 'Get In Touch', desc, logo
+
+7. Footer
+-> Copyright, navbar
+
+
+
+
+
+
+
+
+
+
+
