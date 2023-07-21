@@ -141,7 +141,7 @@ body {
   height: 360px;
   width: 260px;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .education .gradasi {
@@ -165,6 +165,7 @@ body {
 .education .card figcaption {
   color: #f6f6f6;
   font-size: 1.4rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.6);
   transform: translate(0, -55px);
 }
 
@@ -181,11 +182,16 @@ body {
   transform: translate(0, -30px);
 }
 
+.education .card,
 .education .card img,
 .education .card figcaption,
 .education .card .school,
 .education .card .year {
   transition: 0.4s;
+}
+
+.education .card:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .education .card:hover img {
