@@ -8,9 +8,16 @@ body {
   min-height: 2000px;
 }
 
-.hero {
-  padding-top: 30vh;
-  min-height: 100vmin;
+::selection {
+  background-color: #f6f6f6;
+  color: #232428;
+}
+
+.hero .container {
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero h1 {
@@ -63,8 +70,15 @@ body {
 }
 
 .about {
-  /* background-color: #232428; */
-  min-height: 600px;
+  background-color: #232428;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.about h2 {
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
 }
 
 .about p {
@@ -73,10 +87,11 @@ body {
 }
 
 .about .gallery {
+  padding-left: 70px;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 300px;
+  max-width: 400px;
 }
 
 .about .card {
@@ -102,4 +117,97 @@ body {
   cursor: pointer;
   border-radius: 1rem;
   box-shadow: 0 5px 8px rgb(0, 0, 0, 0.5);
+}
+
+.education {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.education .col-lg-4 {
+  display: grid;
+  justify-content: center;
+}
+
+.education h2 {
+  font-size: 2rem;
+  text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+.education .card {
+  background-color: #1c1b1f;
+  overflow: hidden;
+  height: 360px;
+  width: 260px;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.education .gradasi {
+  position: absolute;
+  height: 360px;
+  width: 260px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.education .card:hover .gradasi {
+  opacity: 1;
+}
+
+.education .card img {
+  /* height: 360px; */
+  width: 260px;
+}
+
+.education .card figcaption {
+  color: #f6f6f6;
+  font-size: 1.4rem;
+  transform: translate(0, -55px);
+}
+
+.education .card p {
+  color: #f6f6f6;
+  opacity: 0;
+}
+
+.education .card .school {
+  transform: translate(0, -10px);
+}
+
+.education .card .year {
+  transform: translate(0, -30px);
+}
+
+.education .card img,
+.education .card figcaption,
+.education .card .school,
+.education .card .year {
+  transition: 0.4s;
+}
+
+.education .card:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.7) grayscale(0.1);
+}
+
+.education .card:hover figcaption {
+  transform: translate(0, -120px);
+  font-size: 1rem;
+  opacity: 0;
+}
+
+.education .card:hover .school {
+  transform: translate(0, -105px);
+  font-size: 1.5rem;
+  opacity: 1;
+}
+
+.education .card:hover .year {
+  transform: translate(0, -120px);
+  font-size: 1.2rem;
+  font-weight: 300;
+  opacity: 1;
 }
