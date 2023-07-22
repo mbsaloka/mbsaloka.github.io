@@ -217,3 +217,96 @@ body {
   font-weight: 300;
   opacity: 1;
 }
+
+.interest {
+  min-height: 100vh;
+  background-color: #232428;
+  display: grid;
+  align-items: center;
+}
+
+input {
+  display: none;
+}
+
+.carousel {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+  width: 700px;
+  background-color: #1c1b1f;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.carousel-container {
+  display: grid;
+  justify-content: center;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.carousel-content h3 {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-controls {
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.carousel-controls,
+.dots {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+
+label {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #f46d18;
+  transition: 0.3s;
+}
+
+.dots {
+  left: 0;
+  bottom: 0;
+  height: 400px;
+  /* background: linear-gradient(transparent, #000 90%); */
+  gap: 12px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+input:nth-child(1):checked ~ .dots label:nth-child(1),
+input:nth-child(2):checked ~ .dots label:nth-child(2),
+input:nth-child(3):checked ~ .dots label:nth-child(3) {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+input:nth-child(1):checked ~ .carousel-content {
+  translate: 0;
+}
+input:nth-child(2):checked ~ .carousel-content {
+  translate: -700px;
+}
+input:nth-child(3):checked ~ .carousel-content {
+  translate: -1400px;
+}
