@@ -287,14 +287,30 @@ input {
   justify-content: center;
   margin-bottom: 20px;
   border-radius: 50%;
-  background: #f46d18;
   transition: 0.3s;
 }
 
-input:nth-child(1):checked ~ .dots label:nth-child(1),
-input:nth-child(2):checked ~ .dots label:nth-child(2),
-input:nth-child(3):checked ~ .dots label:nth-child(3) {
-  background: rgba(255, 255, 255, 0.95);
+.interest .dots button {
+  height: 80px;
+  width: 80px;
+  border: 0 solid black;
+  color: #f6f6f6;
+  background-color: #1c1b1f;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.interest .dots button:active {
+  background: #f46d18;
+}
+
+.interest .dots button:focus {
+  background: #f46d18;
 }
 
 input:nth-child(1):checked ~ .carousel-content {
