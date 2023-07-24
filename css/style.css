@@ -265,8 +265,7 @@ input {
   justify-content: flex-end;
 }
 
-.carousel-controls,
-.dots {
+.carousel-controls {
   position: absolute;
   z-index: 2;
   display: flex;
@@ -274,25 +273,22 @@ input {
   width: 100%;
 }
 
-label {
-  position: relative;
-  z-index: 2;
-  display: block;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: #f46d18;
-  transition: 0.3s;
+.interest .dots {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
 
-.dots {
-  left: 0;
-  bottom: 0;
-  height: 400px;
-  /* background: linear-gradient(transparent, #000 90%); */
-  gap: 12px;
+.interest label {
+  height: 80px;
+  width: 80px;
+  display: grid;
+  align-items: center;
   justify-content: center;
-  padding-bottom: 50px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: #f46d18;
+  transition: 0.3s;
 }
 
 input:nth-child(1):checked ~ .dots label:nth-child(1),
@@ -309,4 +305,11 @@ input:nth-child(2):checked ~ .carousel-content {
 }
 input:nth-child(3):checked ~ .carousel-content {
   translate: -1400px;
+}
+
+.vertical span {
+  font-size: 3rem;
+  font-weight: 450;
+  display: block;
+  text-align: center;
 }
