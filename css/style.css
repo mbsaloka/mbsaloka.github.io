@@ -54,10 +54,8 @@ body {
   background: rgb(255, 183, 25);
   background: linear-gradient(90deg, rgba(255, 183, 25, 1) 0%, rgba(230, 23, 23, 1) 100%);
 
-  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4);
-  box-shadow: inset 0px -3px 0px rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.07);
-  box-shadow: 0 0 100px 0 #f46d18;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4), inset 0px -2px 0px rgba(255, 255, 255, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.01), 0 0 100px 0 #f46d18;
+
   transform: scale(1.01);
 
   z-index: -1;
@@ -285,32 +283,58 @@ input {
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
   border-radius: 50%;
-  transition: 0.3s;
 }
 
 .interest .dots button {
   height: 80px;
   width: 80px;
   border: 0 solid black;
-  color: #f6f6f6;
   background-color: #1c1b1f;
   border-radius: 50%;
+
+  color: #f6f6f6;
+  font-size: 1.3rem;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+
+  background-color: #1c1b1f;
+  position: relative;
+  z-index: 1;
+
   display: grid;
   align-items: center;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   border-radius: 50%;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
-.interest .dots button:active {
-  background: #f46d18;
+.interest .dots button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgb(255, 183, 25);
+  background: linear-gradient(90deg, rgba(255, 183, 25, 1) 0%, rgba(230, 23, 23, 1) 100%);
+
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.4), inset 0px -2px 0px rgba(255, 255, 255, 0.2), 0 0 0 4px rgba(255, 255, 255, 0.01), 0 0 20px 0 rgba(244, 109, 24, 0.8), 0 0 100px 0 #f46d18;
+
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s linear;
 }
 
-.interest .dots button:focus {
-  background: #f46d18;
+.interest .dots button:active::before {
+  /* background: #f46d18; */
+  opacity: 1;
+}
+
+.interest .dots button:focus::before {
+  /* background: #f46d18; */
+  opacity: 1;
 }
 
 input:nth-child(1):checked ~ .carousel-content {
