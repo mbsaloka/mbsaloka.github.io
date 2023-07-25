@@ -54,10 +54,26 @@ body {
 
 .hero h1 {
   font-size: 4rem;
-  /* text-shadow: 0 5px 7px rgba(0, 0, 0, 0.5); */
-  background: linear-gradient(45deg, rgba(255, 183, 25, 1) 0%, rgba(230, 23, 23, 1) 100%);
+  filter: drop-shadow(0 0 1px #f46d18);
+  background: linear-gradient(45deg, rgba(255, 183, 25, 1), rgba(230, 23, 23, 1), rgba(255, 183, 25, 1), rgba(230, 23, 23, 1));
+
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hero p {
@@ -419,9 +435,9 @@ input:nth-child(3):checked ~ .carousel-content {
 }
 
 .contact .social-icons a {
-  /* height: 20px;
-  width: 20px;
-  background-color: #f46d18; */
+  height: 40px;
+  width: 40px;
+  /* background-color: #f46d18; */
   border-radius: 50%;
   display: flex;
   align-items: center;
