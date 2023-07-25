@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  /* scroll-padding: 0px; */
+}
+
 body {
   background-color: #1c1b1f; /* bg 1 */
   /* background-color: #232428; bg 2 */
@@ -11,6 +16,10 @@ body {
 ::selection {
   background-color: #f6f6f6;
   color: #232428;
+}
+
+.navbar {
+  padding: 0px;
 }
 
 .navbar .nav {
@@ -132,6 +141,8 @@ body {
   display: grid;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 .about h2 {
@@ -140,6 +151,7 @@ body {
 
 .about p {
   font-weight: 300;
+  text-align: justify;
 }
 
 .about .gallery {
@@ -483,15 +495,78 @@ footer p a {
 }
 
 /* Animation On Scroll */
-.hidden {
+
+/* Hero */
+.hidden-hero-1 {
   opacity: 0;
-  filter: blur(5px);
-  transform: translate(-100%);
-  transition: all 1s;
+  transform: scale(0.98);
+  transition: all 3s 0.2s;
 }
 
-.show {
+.show-hero-1 {
   opacity: 1;
-  filter: blur(0);
-  transform: translate(0);
+  transform: scale(1);
+}
+
+.hidden-hero-2 {
+  opacity: 0;
+  transform: translate(0, -10px);
+  transition: all 2s 0.2s;
+}
+
+.show-hero-2 {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.hidden-hero-3 {
+  opacity: 0;
+  transform: translate(0, -20px);
+  transition: all 2s 0.2s;
+}
+
+.show-hero-3 {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* About */
+.about .hidden-about-1 {
+  opacity: 0;
+  transform: translate(0, -80px);
+}
+
+.about .card:nth-child(3) {
+  transition: all 0.8s, opacity 2s, transform 2s;
+}
+
+.about .card:nth-child(2) {
+  transition: all 0.8s, opacity 2s, transform 2s 200ms;
+}
+
+.about .card:nth-child(1) {
+  transition: all 0.8s, opacity 2s, transform 2s 400ms;
+}
+
+.about .show-about-1 {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.hidden-about-2 {
+  opacity: 0;
+  transform: translate(0, 10px);
+}
+
+h2.hidden-about-2 {
+  transition: all 2s 0.1s;
+}
+
+p.hidden-about-2 {
+  transition: all 2s 0.25s;
+}
+
+.show-about-2 {
+  opacity: 1;
+  transform: translate(0, 0);
 }
