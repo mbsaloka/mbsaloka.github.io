@@ -12,6 +12,39 @@ body {
   color: #232428;
 }
 
+.navbar .nav {
+  background-color: #232428;
+  font-weight: 300;
+  opacity: 0.4;
+  height: 50px;
+  width: 550px;
+  border-radius: 25px;
+  box-shadow: inset 1px 1px 3px rgba(28, 27, 31, 0.6), 2px 2px 5px rgba(28, 27, 31, 0.8);
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.navbar .nav:hover {
+  opacity: 1;
+}
+
+.navbar .nav a {
+  color: #f6f6f6;
+  transition: 0.3s;
+}
+
+.navbar .nav a:hover {
+  color: #f6f6f6;
+  text-shadow: 0 0 30px white;
+}
+
 .hero .container {
   min-height: 100vh;
   display: grid;
@@ -364,7 +397,7 @@ input:nth-child(3):checked ~ .carousel-content {
 }
 
 .contact {
-  min-height: 400px;
+  min-height: 70vh;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -408,13 +441,6 @@ input:nth-child(3):checked ~ .carousel-content {
 
 .contact .icon > :not(:hover) {
   opacity: 0.5;
-}
-
-.page-gradient {
-  height: 10px;
-  width: 100vw;
-  /* background: rgb(28, 27, 31);
-  background: linear-gradient(180deg, rgba(28, 27, 31, 1) 0%, rgba(246, 246, 246, 1) 100%); */
 }
 
 footer {
