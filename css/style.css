@@ -4,8 +4,7 @@ body {
   font-family: "Lexend", sans-serif;
   /* font-family: "Urbanist", sans-serif; */
   color: #f6f6f6;
-
-  min-height: 2000px;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -22,7 +21,10 @@ body {
 
 .hero h1 {
   font-size: 4rem;
-  text-shadow: 0 5px 7px rgba(0, 0, 0, 0.5);
+  /* text-shadow: 0 5px 7px rgba(0, 0, 0, 0.5); */
+  background: linear-gradient(45deg, rgba(255, 183, 25, 1) 0%, rgba(230, 23, 23, 1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero p {
@@ -284,6 +286,7 @@ input {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  text-shadow: 1px 1px 2px #232428;
 }
 
 .interest .dots button {
@@ -327,14 +330,20 @@ input {
   transition: opacity 0.3s linear;
 }
 
-.interest .dots button:active::before {
-  /* background: #f46d18; */
+.interest .dots button:hover::before {
   opacity: 1;
 }
 
-.interest .dots button:focus::before {
-  /* background: #f46d18; */
-  opacity: 1;
+.interest .dots button:active {
+  background: #f46d18;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px rgba(255, 255, 255, 0.1), 0 0 0 3px rgba(255, 255, 255, 0.01);
+  transform: translate(1px, 3px) scale(0.95);
+}
+
+.interest .dots button:focus {
+  background: #f46d18;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), inset 0px -1px 0px rgba(255, 255, 255, 0.1), 0 0 0 3px rgba(255, 255, 255, 0.01);
+  transform: translate(1px, 3px) scale(0.95);
 }
 
 input:nth-child(1):checked ~ .carousel-content {
@@ -352,4 +361,74 @@ input:nth-child(3):checked ~ .carousel-content {
   font-weight: 450;
   display: block;
   text-align: center;
+}
+
+.contact {
+  min-height: 400px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact h2 {
+  font-weight: 500;
+}
+
+.contact p {
+  font-weight: 200;
+}
+
+.contact .social-icons {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact .social-icons a {
+  /* height: 20px;
+  width: 20px;
+  background-color: #f46d18; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.contact .icon svg {
+  fill: url(#MyGradient);
+  transition: 0.4s;
+}
+
+.contact .icon svg:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 70px rgb(244 109 24));
+}
+
+.contact .icon > :not(:hover) {
+  opacity: 0.5;
+}
+
+.page-gradient {
+  height: 10px;
+  width: 100vw;
+  /* background: rgb(28, 27, 31);
+  background: linear-gradient(180deg, rgba(28, 27, 31, 1) 0%, rgba(246, 246, 246, 1) 100%); */
+}
+
+footer {
+  background-color: #f6f6f6;
+  color: #1c1b1f;
+}
+
+footer p {
+  margin: 0;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
+footer p a {
+  color: #1c1b1f;
+  text-decoration: none;
 }
