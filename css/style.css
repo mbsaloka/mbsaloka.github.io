@@ -286,6 +286,16 @@ body {
   opacity: 1;
 }
 
+.education-bg {
+  position: absolute;
+  z-index: -1;
+  height: 30vh;
+  left: 0;
+  right: 0;
+  top: 270vh;
+  background-color: #232428;
+}
+
 .interest {
   min-height: 100vh;
   background-color: #232428;
@@ -487,6 +497,7 @@ footer p {
   margin: 0;
   padding: 10px;
   letter-spacing: 2px;
+  font-size: 12px;
 }
 
 footer p a {
@@ -537,15 +548,15 @@ footer p a {
 }
 
 .about .card:nth-child(3) {
-  transition: all 0.8s, opacity 2s, transform 2s;
+  transition: all 0.8s, opacity 2s 400ms, transform 2s 400ms;
 }
 
 .about .card:nth-child(2) {
-  transition: all 0.8s, opacity 2s, transform 2s 200ms;
+  transition: all 0.8s, opacity 2s 600ms, transform 2s 600ms;
 }
 
 .about .card:nth-child(1) {
-  transition: all 0.8s, opacity 2s, transform 2s 400ms;
+  transition: all 0.8s, opacity 2s 800ms, transform 2s 800ms;
 }
 
 .about .show-about-1 {
@@ -569,4 +580,81 @@ p.hidden-about-2 {
 .show-about-2 {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+/* Education */
+.hidden-education-1 {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(0, -1rem);
+  transition: all 2s 200ms;
+}
+
+.show-education-1 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0, 0);
+}
+
+.education .hidden-education-2 {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translate(-100%);
+  transition: all 2s;
+}
+
+.education .card-container:nth-child(3) {
+  transition-delay: 200ms;
+}
+.education .card-container:nth-child(2) {
+  transition-delay: 400ms;
+}
+.education .card-container:nth-child(1) {
+  transition-delay: 600ms;
+}
+
+.education .show-education-2 {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate(0);
+}
+
+/* Contact */
+.hidden-contact {
+  filter: grayscale(1) brightness(0.5);
+  transition: 1.5s;
+}
+
+.social-icons .icon:nth-child(1) {
+  transition-delay: 200ms;
+}
+
+.social-icons .icon:nth-child(2) {
+  transition-delay: 400ms;
+}
+
+.social-icons .icon:nth-child(3) {
+  transition-delay: 600ms;
+}
+
+.social-icons .icon:nth-child(4) {
+  transition-delay: 800ms;
+}
+
+.show-contact {
+  filter: grayscale(0) brightness(1);
+}
+
+/* Hidden Section */
+.interest {
+  display: none;
+}
+.contact {
+  background-color: #232428;
+}
+.nav .nav-item:nth-child(4) {
+  display: none;
+}
+.navbar .nav {
+  width: 380px;
 }

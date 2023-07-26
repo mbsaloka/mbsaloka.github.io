@@ -73,3 +73,43 @@ const observerAbout2 = new IntersectionObserver((entries) => {
 
 const hiddenElementsAbout2 = document.querySelectorAll(".hidden-about-2");
 hiddenElementsAbout2.forEach((el) => observerAbout2.observe(el));
+
+// Animasi Education
+const observerEducation1 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-education-1");
+    } else {
+      entry.target.classList.remove("show-education-1");
+    }
+  });
+});
+
+const hiddenElementsEducation1 = document.querySelectorAll(".hidden-education-1");
+hiddenElementsEducation1.forEach((el) => observerEducation1.observe(el));
+
+const observerEducation2 = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-education-2");
+    } else {
+      entry.target.classList.remove("show-education-2");
+    }
+  });
+});
+
+const hiddenElementsEducation2 = document.querySelectorAll(".hidden-education-2");
+hiddenElementsEducation2.forEach((el) => observerEducation2.observe(el));
+
+const observerContact = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-contact");
+    } else {
+      entry.target.classList.remove("show-contact");
+    }
+  });
+});
+
+const hiddenElementsContact = document.querySelectorAll(".hidden-contact");
+hiddenElementsContact.forEach((el) => observerContact.observe(el));
