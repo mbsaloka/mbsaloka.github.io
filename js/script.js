@@ -3,8 +3,7 @@ $(window).scroll(function () {
   var wScroll = $(this).scrollTop();
 
   $(".hero .container").css({
-    transform: "translate(0px, " + wScroll / 15 + "%)",
-    // transform: "translate(0px, " + wScroll / 20 + "%)",
+    transform: "translate(0px, " + wScroll / 20 + "%)",
   });
 });
 
