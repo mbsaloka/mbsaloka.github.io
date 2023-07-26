@@ -203,7 +203,7 @@ body {
   position: relative;
 }
 
-.education .col-lg-4 {
+.education .card-container {
   display: grid;
   justify-content: center;
 }
@@ -215,19 +215,22 @@ body {
   text-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
 }
 
+.education .card,
+.education .gradasi,
+.education .card img {
+  height: 360px;
+  width: 260px;
+}
+
 .education .card {
   background-color: #1c1b1f;
   overflow: hidden;
-  height: 360px;
-  width: 260px;
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .education .gradasi {
   position: absolute;
-  height: 360px;
-  width: 260px;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
   opacity: 0;
   transition: 0.4s;
@@ -235,11 +238,6 @@ body {
 
 .education .card:hover .gradasi {
   opacity: 1;
-}
-
-.education .card img {
-  /* height: 360px; */
-  width: 260px;
 }
 
 .education .card figcaption {
@@ -658,13 +656,60 @@ p.hidden-about-2 {
   filter: grayscale(0) brightness(1);
 }
 
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .education .card,
+  .education .gradasi,
+  .education .card img {
+    height: 270px;
+    width: 195px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .education .card {
+    height: 40px;
+  }
+  .education .card,
+  .education .card img {
+    border-radius: 10px;
+    width: 250px;
+  }
+  .education .card figcaption {
+    transform: translate(0, -268px);
+  }
+
+  .education .card:hover,
+  .education .card:hover img {
+    height: 270px;
+    width: 195px;
+    border-radius: 1rem;
+  }
+
+  /* .education .card:hover figcaption {
+    transform: translate(0, -120px);
+    font-size: 1rem;
+    opacity: 0;
+  }
+
+  .education .card:hover .school {
+    transform: translate(0, -105px);
+    font-size: 1.5rem;
+    opacity: 1;
+  }
+
+  .education .card:hover .year {
+    transform: translate(0, -120px);
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 1;
+  } */
+}
+
 /* Hidden Section */
 .interest {
   display: none;
 }
-/* .contact {
-  background-color: #232428;
-} */
 .nav .nav-item:nth-child(4) {
   display: none;
 }
