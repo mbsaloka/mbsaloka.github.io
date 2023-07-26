@@ -188,6 +188,7 @@ body {
 }
 
 .education {
+  background-color: #1c1b1f;
   min-height: 100vh;
   display: grid;
   align-items: center;
@@ -288,8 +289,8 @@ body {
 
 .education-bg {
   position: absolute;
-  z-index: -1;
-  height: 30vh;
+  /* z-index: 1; */
+  min-height: 30vh;
   left: 0;
   right: 0;
   top: 270vh;
