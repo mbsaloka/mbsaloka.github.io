@@ -141,7 +141,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .about h2 {
@@ -200,6 +200,7 @@ body {
   min-height: 100vh;
   display: grid;
   align-items: center;
+  position: relative;
 }
 
 .education .col-lg-4 {
@@ -297,15 +298,14 @@ body {
   opacity: 1;
 }
 
-.education-bg {
+/* .education-bg {
   position: absolute;
-  /* z-index: 1; */
   min-height: 30vh;
   left: 0;
   right: 0;
   top: 270vh;
   background-color: #232428;
-}
+} */
 
 .interest {
   min-height: 100vh;
@@ -453,10 +453,12 @@ input:nth-child(3):checked ~ .carousel-content {
 }
 
 .contact {
+  background-color: #232428;
   min-height: 75vh;
   display: grid;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .contact h2 {
@@ -660,9 +662,9 @@ p.hidden-about-2 {
 .interest {
   display: none;
 }
-.contact {
+/* .contact {
   background-color: #232428;
-}
+} */
 .nav .nav-item:nth-child(4) {
   display: none;
 }
