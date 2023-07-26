@@ -26,7 +26,7 @@ body {
   background-color: rgba(35, 36, 40, 0.1);
   font-weight: 300;
   height: 50px;
-  width: 520px;
+  width: 380px;
   border-radius: 20px;
   box-shadow: inset 1px 1px 3px rgba(28, 27, 31, 0.6), 2px 2px 5px rgba(28, 27, 31, 0.8);
   backdrop-filter: blur(5px);
@@ -167,7 +167,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  max-width: 400px;
+  max-width: 360px;
 }
 
 .about .card {
@@ -175,7 +175,7 @@ body {
   left: 0;
   width: 80px;
   border-radius: 2rem;
-  height: 360px;
+  height: 320px;
   overflow: hidden;
   background-color: #1c1b1f;
   transition: 0.4s ease-in-out;
@@ -184,7 +184,7 @@ body {
 }
 
 .about img {
-  height: 360px;
+  height: 320px;
 }
 
 .about .card:hover {
@@ -206,6 +206,7 @@ body {
 .education .card-container {
   display: grid;
   justify-content: center;
+  padding: 0;
 }
 
 .education h2 {
@@ -666,7 +667,29 @@ p.hidden-about-2 {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+  .about .gallery-container {
+    display: grid;
+    justify-content: center;
+  }
+
+  .about .gallery {
+    padding-left: 0;
+    padding-top: 20px;
+    /* align-items: center; */
+    justify-content: center;
+  }
+
+  .about .card,
+  .about img {
+    height: 280px;
+  }
+
+  .about .card:hover,
+  .about .card:hover img {
+    transform: scale(1.05);
+  }
+
   .education .card {
     height: 40px;
   }
@@ -678,32 +701,52 @@ p.hidden-about-2 {
   .education .card figcaption {
     transform: translate(0, -268px);
   }
-
   .education .card:hover,
   .education .card:hover img {
     height: 270px;
     width: 195px;
     border-radius: 1rem;
   }
-
-  /* .education .card:hover figcaption {
-    transform: translate(0, -120px);
-    font-size: 1rem;
-    opacity: 0;
+  .education .card:hover img {
+    transform: scale(1.1);
+    filter: brightness(1) grayscale(0);
   }
-
-  .education .card:hover .school {
-    transform: translate(0, -105px);
-    font-size: 1.5rem;
-    opacity: 1;
+  .education .card-container {
+    display: grid;
+    justify-content: center;
+    padding: 0;
   }
+}
 
-  .education .card:hover .year {
-    transform: translate(0, -120px);
-    font-size: 1.2rem;
+@media screen and (max-width: 576px) {
+  .navbar .nav {
+    background-color: rgba(35, 36, 40, 0.1);
     font-weight: 300;
-    opacity: 1;
-  } */
+    height: 40px;
+    width: 300px;
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 3px rgba(28, 27, 31, 0.6), 2px 2px 5px rgba(28, 27, 31, 0.8);
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .nav-link {
+    padding: 4px 12px;
+  }
+
+  .navbar .nav a {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  footer p {
+    margin: 0;
+    padding: 10px;
+    letter-spacing: 1px;
+    font-size: 12px;
+  }
 }
 
 /* Hidden Section */
@@ -712,7 +755,4 @@ p.hidden-about-2 {
 }
 .nav .nav-item:nth-child(4) {
   display: none;
-}
-.navbar .nav {
-  width: 380px;
 }
