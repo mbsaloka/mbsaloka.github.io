@@ -309,49 +309,45 @@ body {
 }
 
 /* Education bg text */
-.education h1 {
+.education {
+  overflow-x: hidden;
+}
+.education .text-datang,
+.education .text-pergi {
   /* display: inline-block; */
   position: absolute;
   z-index: 1;
   font-size: 10.5vw;
   font-weight: 900;
   color: #232428;
+  opacity: 1;
   left: 0;
   right: 0;
   margin: auto;
   text-align: center;
 }
 .education .text-datang {
-  transform: translateX(-100vw);
+  transform: translateX(-100vw) scaleY(1.2);
 }
 .education .text-pergi {
-  transform: translateX(100vw);
+  transform: translateX(100vw) scaleY(1.2);
   opacity: 0;
   transition: transform 0.4s ease, opacity 0s 0.4s ease;
-}
-.education .card-hover {
-  height: 360px;
-  width: 260px;
-  /* background-color: aqua; */
-  position: absolute;
-  z-index: 11;
-  border-radius: 1rem;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
 }
 .card-container {
   position: relative;
   z-index: 10;
 }
-.education .card-hover:hover ~ .text-datang {
-  transform: translateX(0vw);
-  transform-origin: bottom left;
+.education .card-container.SMP:hover ~ .text-datang.SMP,
+.education .card-container.SMA:hover ~ .text-datang.SMA,
+.education .card-container.ITS:hover ~ .text-datang.ITS {
+  transform: translateX(0vw) scaleY(1.2);
   transition: transform 0.4s ease;
 }
-.education .card-hover:hover ~ .text-pergi {
-  transform: translateX(0vw);
-  transform-origin: bottom left;
+.education .card-container.SMP:hover ~ .text-pergi.SMP,
+.education .card-container.SMA:hover ~ .text-pergi.SMA,
+.education .card-container.ITS:hover ~ .text-pergi.ITS {
+  transform: translateX(0vw) scaleY(1.2);
   opacity: 1;
 }
 /* Akhir Education bg text */
@@ -766,6 +762,10 @@ p.hidden-about-2 {
     display: grid;
     justify-content: center;
     padding: 0;
+  }
+  .education .text-datang,
+  .education .text-pergi {
+    display: none;
   }
 }
 
