@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: "Urbanist", sans-serif;
+        /* min-height: 200vh; */
+        overflow-x: hidden;
+        background-color: #1c1b1f;
+      }
+      .container {
+        min-height: 100vh;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+      }
+      .card {
+        position: relative;
+        height: 360px;
+        width: 260px;
+        background-color: skyblue;
+        border-radius: 16px;
+        z-index: 1;
+        transition: 0.5s;
+      }
+      .card:hover {
+        transform: scale(1.1);
+      }
+      h1 {
+        display: inline-block;
+        position: absolute;
+        /* width: 110vw; */
+        /* font-size: 11vw; */
+        font-size: 10.5vw;
+        font-weight: 900;
+        color: #232428;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+      }
+      .text-datang {
+        transform: translateX(-100vw);
+        transform-origin: bottom right;
+      }
+      .text-pergi {
+        transform: translateX(100vw);
+        transform-origin: bottom right;
+        opacity: 0;
+        transition: transform 0.4s ease, opacity 0s 0.4s ease;
+      }
+      .card-container:hover ~ .text-datang {
+        transform: translateX(0vw);
+        transform-origin: bottom left;
+        transition: transform 0.4s ease;
+      }
+      .card-container:hover ~ .text-pergi {
+        transform: translateX(0vw);
+        transform-origin: bottom left;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card-container">
+        <div class="card"></div>
+      </div>
+      <h1 class="text-datang">SMAN 1 PASURUAN</h1>
+      <h1 class="text-pergi">SMAN 1 PASURUAN</h1>
+    </div>
+  </body>
+</html>

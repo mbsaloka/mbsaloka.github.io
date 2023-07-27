@@ -308,6 +308,54 @@ body {
   box-shadow: 0 -3px 50px rgba(0, 0, 0, 0.5);
 }
 
+/* Education bg text */
+.education h1 {
+  /* display: inline-block; */
+  position: absolute;
+  z-index: 1;
+  font-size: 10.5vw;
+  font-weight: 900;
+  color: #232428;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+.education .text-datang {
+  transform: translateX(-100vw);
+}
+.education .text-pergi {
+  transform: translateX(100vw);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0s 0.4s ease;
+}
+.education .card-hover {
+  height: 360px;
+  width: 260px;
+  /* background-color: aqua; */
+  position: absolute;
+  z-index: 11;
+  border-radius: 1rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.card-container {
+  position: relative;
+  z-index: 10;
+}
+.education .card-hover:hover ~ .text-datang {
+  transform: translateX(0vw);
+  transform-origin: bottom left;
+  transition: transform 0.4s ease;
+}
+.education .card-hover:hover ~ .text-pergi {
+  transform: translateX(0vw);
+  transform-origin: bottom left;
+  opacity: 1;
+}
+/* Akhir Education bg text */
+
 .interest {
   min-height: 100vh;
   background-color: #232428;
