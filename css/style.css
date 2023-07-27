@@ -298,7 +298,7 @@ body {
   opacity: 1;
 }
 
-.education-bg {
+/* .education-bg {
   position: absolute;
   min-height: 30vh;
   left: 0;
@@ -306,7 +306,7 @@ body {
   top: 70vh;
   background-color: #232428;
   box-shadow: 0 -3px 50px rgba(0, 0, 0, 0.5);
-}
+} */
 
 /* Education bg text */
 .education {
@@ -320,10 +320,10 @@ body {
   font-size: 10.5vw;
   font-weight: 900;
   color: #232428;
-  opacity: 1;
+  /* opacity: 1; */
   left: 0;
   right: 0;
-  margin: auto;
+  margin: 4rem auto 0;
   text-align: center;
 }
 .education .text-datang {
@@ -713,7 +713,7 @@ p.hidden-about-2 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .about .gallery-container {
     display: grid;
     justify-content: center;
