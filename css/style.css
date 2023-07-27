@@ -647,7 +647,7 @@ h2.hidden-about-2 {
 }
 
 p.hidden-about-2 {
-  transition: all 2s 250m s;
+  transition: all 2s 250ms;
 }
 
 .show-about-2 {
