@@ -187,6 +187,19 @@ body {
   height: 320px;
 }
 
+.about .card:nth-child(1) img {
+  filter: brightness(0.75) saturate(0.95);
+}
+
+.about .card:nth-child(2) img {
+  filter: brightness(0.75) saturate(0.95);
+}
+
+.about .card:nth-child(3) img {
+  filter: brightness(0.9);
+  transform: translatex(-10px);
+}
+
 .about .card:hover {
   flex: 2;
   font-weight: bold;
@@ -319,8 +332,9 @@ body {
   z-index: 1;
   font-size: 10.5vw;
   font-weight: 900;
-  color: #232428;
-  /* opacity: 1; */
+  color: #f46c18;
+  filter: blur(1.8px);
+  opacity: 0.1;
   left: 0;
   right: 0;
   margin: 4rem auto 0;
@@ -332,7 +346,7 @@ body {
 .education .text-pergi {
   transform: translateX(100vw) scaleY(1.2);
   opacity: 0;
-  transition: transform 0.4s ease, opacity 0s 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.2s 0.4s ease;
 }
 .card-container {
   position: relative;
@@ -348,7 +362,7 @@ body {
 .education .card-container.SMA:hover ~ .text-pergi.SMA,
 .education .card-container.ITS:hover ~ .text-pergi.ITS {
   transform: translateX(0vw) scaleY(1.2);
-  opacity: 1;
+  opacity: 0.1;
 }
 /* Akhir Education bg text */
 
